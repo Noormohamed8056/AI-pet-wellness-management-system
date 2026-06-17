@@ -11,7 +11,11 @@ import com.jeeva.petcare.service.VetProfileService;
 
 @RestController
 @RequestMapping("/vets/profile")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173"})
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://ai-pet-wellness-management-system.vercel.app"
+})
 @RequiredArgsConstructor
 public class VetProfileController {
 

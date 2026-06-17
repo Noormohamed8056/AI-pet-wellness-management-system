@@ -2,6 +2,20 @@ package com.jeeva.petcare.controller;
 
 import com.jeeva.petcare.model.*;
 import com.jeeva.petcare.repository.*;
+import com.noor.petcare.model.Appointment;
+import com.noor.petcare.model.MedicalRecord;
+import com.noor.petcare.model.Pet;
+import com.noor.petcare.model.Prescription;
+import com.noor.petcare.model.Vaccination;
+import com.noor.petcare.model.VetProfile;
+import com.noor.petcare.repository.AppointmentRepo;
+import com.noor.petcare.repository.MedicalRecordRepo;
+import com.noor.petcare.repository.PetRepo;
+import com.noor.petcare.repository.PrescriptionRepo;
+import com.noor.petcare.repository.UserRepo;
+import com.noor.petcare.repository.VaccinationRepository;
+import com.noor.petcare.repository.VetProfileRepo;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
@@ -15,7 +29,11 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/chatbot")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://ai-pet-wellness-management-system.vercel.app"
+})
 public class ChatbotController {
 
     private final UserRepo userRepo;
@@ -943,7 +961,7 @@ public class ChatbotController {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
             headers.set("Authorization", "Bearer " + apiKey);
-            headers.set("HTTP-Referer", "http://localhost:8080");
+           headers.set("HTTP-Referer", "https://ai-pet-wellness-management-system.onrender.com");
             headers.set("X-Title", "PetCare Veterinary Assistant");
             
             HttpEntity<Map<String, Object>> entity = new HttpEntity<>(requestBody, headers);
