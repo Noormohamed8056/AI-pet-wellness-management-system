@@ -12,7 +12,7 @@ public class RazorpayConfig {
     @Value("${razorpay.key-id:${razorpay.key.id:rzp_test_SBhh5VRQMzU46B}}")
     private String keyId;
 
-    @Value("${razorpay.key-secret:${razorpay.key.secret:BKuYZZXEIT2QOm9nE2RweqjR}}")
+    @Value("${razorpay.key-secret:${razorpay.key.secret:}}")
     private String keySecret;
 
     public RazorpayClient getRazorpayClient() throws RazorpayException {
