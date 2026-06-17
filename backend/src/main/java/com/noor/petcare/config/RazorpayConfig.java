@@ -1,4 +1,4 @@
-package com.jeeva.petcare.config;
+package com.noor.petcare.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

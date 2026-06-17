@@ -1,4 +1,4 @@
-package com.jeeva.petcare.config;
+package com.noor.petcare.config;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.jeeva.petcare.model.*;
-import com.jeeva.petcare.repository.*;
+import com.noor.petcare.model.*;
+import com.noor.petcare.repository.*;
 
 @Configuration
 public class DataLoader {

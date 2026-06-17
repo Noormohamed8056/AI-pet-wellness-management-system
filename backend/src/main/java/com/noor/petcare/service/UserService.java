@@ -1,5 +1,5 @@
 //UserService.java
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,13 +11,13 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.jeeva.petcare.dto.LoginRequest;
-import com.jeeva.petcare.dto.LoginResponse;
-import com.jeeva.petcare.dto.RegisterRequest;
-import com.jeeva.petcare.model.User;
-import com.jeeva.petcare.repository.PetRepo;
-import com.jeeva.petcare.repository.UserRepo;
-import com.jeeva.petcare.repository.VetProfileRepo;
+import com.noor.petcare.dto.LoginRequest;
+import com.noor.petcare.dto.LoginResponse;
+import com.noor.petcare.dto.RegisterRequest;
+import com.noor.petcare.model.User;
+import com.noor.petcare.repository.PetRepo;
+import com.noor.petcare.repository.UserRepo;
+import com.noor.petcare.repository.VetProfileRepo;
 
 import lombok.RequiredArgsConstructor;
 

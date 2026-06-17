@@ -1,10 +1,10 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.model.Vaccination;
-import com.jeeva.petcare.service.VaccinationService;
+import com.noor.petcare.model.Vaccination;
+import com.noor.petcare.service.VaccinationService;
 
 import lombok.RequiredArgsConstructor;
 

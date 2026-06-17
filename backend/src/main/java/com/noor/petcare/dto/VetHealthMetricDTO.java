@@ -1,8 +1,8 @@
-package com.jeeva.petcare.dto;
+package com.noor.petcare.dto;
 
 import java.time.LocalDate;
 
-import com.jeeva.petcare.model.HealthMetric.RecordedBy;
+import com.noor.petcare.model.HealthMetric.RecordedBy;
 
 public record VetHealthMetricDTO(
 

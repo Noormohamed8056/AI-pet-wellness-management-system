@@ -1,11 +1,11 @@
-package com.jeeva.petcare.repository;
+package com.noor.petcare.repository;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.jeeva.petcare.model.VetSlot;
+import com.noor.petcare.model.VetSlot;
 
 public interface VetSlotRepo extends JpaRepository<VetSlot, Long> {
 

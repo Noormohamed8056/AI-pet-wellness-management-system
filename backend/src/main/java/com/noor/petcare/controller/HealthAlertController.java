@@ -1,4 +1,4 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.model.HealthAlert;
-import com.jeeva.petcare.service.HealthAlertService;
+import com.noor.petcare.model.HealthAlert;
+import com.noor.petcare.service.HealthAlertService;
 
 import lombok.RequiredArgsConstructor;
 

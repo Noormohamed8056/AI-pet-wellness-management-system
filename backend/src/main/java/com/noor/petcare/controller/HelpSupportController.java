@@ -1,10 +1,10 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.model.HelpSupport;
-import com.jeeva.petcare.service.HelpSupportService;
+import com.noor.petcare.model.HelpSupport;
+import com.noor.petcare.service.HelpSupportService;
 
 import lombok.RequiredArgsConstructor;
 

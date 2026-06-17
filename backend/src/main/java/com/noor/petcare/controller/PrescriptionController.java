@@ -1,4 +1,4 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jeeva.petcare.model.Prescription;
-import com.jeeva.petcare.service.PrescriptionService;
+import com.noor.petcare.model.Prescription;
+import com.noor.petcare.service.PrescriptionService;
 
 import lombok.RequiredArgsConstructor;
 

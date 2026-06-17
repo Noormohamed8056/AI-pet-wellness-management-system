@@ -1,11 +1,11 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.jeeva.petcare.model.*;
-import com.jeeva.petcare.repository.*;
+import com.noor.petcare.model.*;
+import com.noor.petcare.repository.*;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

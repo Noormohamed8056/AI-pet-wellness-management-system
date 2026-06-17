@@ -1,12 +1,12 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.model.VetSlot;
-import com.jeeva.petcare.service.VetSlotService;
+import com.noor.petcare.model.VetSlot;
+import com.noor.petcare.service.VetSlotService;
 
 import lombok.RequiredArgsConstructor;
 

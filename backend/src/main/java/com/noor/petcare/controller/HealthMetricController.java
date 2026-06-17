@@ -1,4 +1,4 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.model.HealthMetric;
-import com.jeeva.petcare.service.HealthMetricService;
+import com.noor.petcare.model.HealthMetric;
+import com.noor.petcare.service.HealthMetricService;
 
 import lombok.RequiredArgsConstructor;
 

@@ -1,11 +1,11 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.service.CartService;
+import com.noor.petcare.service.CartService;
 
 @RestController
 @RequestMapping("/cart")

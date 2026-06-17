@@ -1,5 +1,5 @@
 //LoginResponse.java
-package com.jeeva.petcare.dto;
+package com.noor.petcare.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,7 +1,7 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
-import com.jeeva.petcare.model.*;
-import com.jeeva.petcare.repository.*;
+import com.noor.petcare.model.*;
+import com.noor.petcare.repository.*;
 import com.noor.petcare.model.Appointment;
 import com.noor.petcare.model.MedicalRecord;
 import com.noor.petcare.model.Pet;

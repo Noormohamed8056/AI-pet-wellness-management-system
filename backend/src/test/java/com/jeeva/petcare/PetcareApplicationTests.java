@@ -1,4 +1,4 @@
-package com.jeeva.petcare;
+package com.noor.petcare;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

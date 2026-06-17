@@ -1,13 +1,13 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.jeeva.petcare.model.*;
-import com.jeeva.petcare.model.Vaccination.VaccineStatus;
-import com.jeeva.petcare.repository.*;
+import com.noor.petcare.model.*;
+import com.noor.petcare.model.Vaccination.VaccineStatus;
+import com.noor.petcare.repository.*;
 
 import lombok.RequiredArgsConstructor;
 

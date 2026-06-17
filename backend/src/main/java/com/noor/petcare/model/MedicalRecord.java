@@ -1,4 +1,4 @@
-package com.jeeva.petcare.model;
+package com.noor.petcare.model;
 
 import java.time.LocalDateTime;
 import java.util.List;

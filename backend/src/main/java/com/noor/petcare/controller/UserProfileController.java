@@ -1,4 +1,4 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import lombok.RequiredArgsConstructor;
 
-import com.jeeva.petcare.model.UserProfile;
-import com.jeeva.petcare.service.UserProfileService;
+import com.noor.petcare.model.UserProfile;
+import com.noor.petcare.service.UserProfileService;
 
 @RestController
 @RequestMapping("/users/profile")

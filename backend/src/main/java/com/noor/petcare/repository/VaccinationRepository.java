@@ -1,4 +1,4 @@
-package com.jeeva.petcare.repository;
+package com.noor.petcare.repository;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.jeeva.petcare.model.Vaccination;
+import com.noor.petcare.model.Vaccination;
 
 public interface VaccinationRepository extends JpaRepository<Vaccination, Long> {
 

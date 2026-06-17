@@ -1,13 +1,13 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.jeeva.petcare.model.Appointment;
-import com.jeeva.petcare.model.MedicalRecord;
-import com.jeeva.petcare.repository.AppointmentRepo;
-import com.jeeva.petcare.repository.MedicalRecordRepo;
+import com.noor.petcare.model.Appointment;
+import com.noor.petcare.model.MedicalRecord;
+import com.noor.petcare.repository.AppointmentRepo;
+import com.noor.petcare.repository.MedicalRecordRepo;
 
 import lombok.RequiredArgsConstructor;
 

@@ -1,13 +1,13 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 
-import com.jeeva.petcare.model.User;
-import com.jeeva.petcare.model.UserProfile;
-import com.jeeva.petcare.repository.UserProfileRepository;
-import com.jeeva.petcare.repository.UserRepo;
+import com.noor.petcare.model.User;
+import com.noor.petcare.model.UserProfile;
+import com.noor.petcare.repository.UserProfileRepository;
+import com.noor.petcare.repository.UserRepo;
 
 @Service
 @RequiredArgsConstructor

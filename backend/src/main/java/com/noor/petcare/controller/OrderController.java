@@ -1,11 +1,11 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.model.Order;
-import com.jeeva.petcare.service.OrderService;
+import com.noor.petcare.model.Order;
+import com.noor.petcare.service.OrderService;
 import com.razorpay.RazorpayException;
 
 @RestController

@@ -1,5 +1,5 @@
 //UserRepo.java
-package com.jeeva.petcare.repository;
+package com.noor.petcare.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.jeeva.petcare.model.User;
+import com.noor.petcare.model.User;
 
 public interface UserRepo extends JpaRepository<User, Long>{
     

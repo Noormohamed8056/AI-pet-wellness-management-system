@@ -1,4 +1,4 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -8,10 +8,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
 
-import com.jeeva.petcare.model.User;
-import com.jeeva.petcare.model.VetProfile;
-import com.jeeva.petcare.repository.UserRepo;
-import com.jeeva.petcare.repository.VetProfileRepo;
+import com.noor.petcare.model.User;
+import com.noor.petcare.model.VetProfile;
+import com.noor.petcare.repository.UserRepo;
+import com.noor.petcare.repository.VetProfileRepo;
 
 @Service
 @RequiredArgsConstructor

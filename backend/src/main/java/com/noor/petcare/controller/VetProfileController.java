@@ -1,4 +1,4 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -6,8 +6,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
 
-import com.jeeva.petcare.model.VetProfile;
-import com.jeeva.petcare.service.VetProfileService;
+import com.noor.petcare.model.VetProfile;
+import com.noor.petcare.service.VetProfileService;
 
 @RestController
 @RequestMapping("/vets/profile")

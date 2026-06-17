@@ -1,4 +1,4 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -10,8 +10,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-import com.jeeva.petcare.model.*;
-import com.jeeva.petcare.repository.*;
+import com.noor.petcare.model.*;
+import com.noor.petcare.repository.*;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

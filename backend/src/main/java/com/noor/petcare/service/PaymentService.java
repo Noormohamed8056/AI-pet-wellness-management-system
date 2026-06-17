@@ -1,5 +1,5 @@
 //PaymentService
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,9 +8,9 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
-import com.jeeva.petcare.config.RazorpayConfig;
-import com.jeeva.petcare.model.*;
-import com.jeeva.petcare.repository.*;
+import com.noor.petcare.config.RazorpayConfig;
+import com.noor.petcare.model.*;
+import com.noor.petcare.repository.*;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

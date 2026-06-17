@@ -1,4 +1,4 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,19 +8,19 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
-import com.jeeva.petcare.model.Appointment;
-import com.jeeva.petcare.model.Pet;
-import com.jeeva.petcare.model.User;
-import com.jeeva.petcare.repository.AppointmentRepo;
-import com.jeeva.petcare.repository.FeedbackRepo;
-import com.jeeva.petcare.repository.HealthAlertRepo;
-import com.jeeva.petcare.repository.HealthMetricRepo;
-import com.jeeva.petcare.repository.MedicalRecordRepo;
-import com.jeeva.petcare.repository.PaymentRepo;
-import com.jeeva.petcare.repository.PetRepo;
-import com.jeeva.petcare.repository.PrescriptionRepo;
-import com.jeeva.petcare.repository.UserRepo;
-import com.jeeva.petcare.repository.VaccinationRepository;
+import com.noor.petcare.model.Appointment;
+import com.noor.petcare.model.Pet;
+import com.noor.petcare.model.User;
+import com.noor.petcare.repository.AppointmentRepo;
+import com.noor.petcare.repository.FeedbackRepo;
+import com.noor.petcare.repository.HealthAlertRepo;
+import com.noor.petcare.repository.HealthMetricRepo;
+import com.noor.petcare.repository.MedicalRecordRepo;
+import com.noor.petcare.repository.PaymentRepo;
+import com.noor.petcare.repository.PetRepo;
+import com.noor.petcare.repository.PrescriptionRepo;
+import com.noor.petcare.repository.UserRepo;
+import com.noor.petcare.repository.VaccinationRepository;
 
 @Service
 @RequiredArgsConstructor

@@ -1,7 +1,7 @@
 //RegisterRequest.java
-package com.jeeva.petcare.dto;
+package com.noor.petcare.dto;
 
-import com.jeeva.petcare.model.User;
+import com.noor.petcare.model.User;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;

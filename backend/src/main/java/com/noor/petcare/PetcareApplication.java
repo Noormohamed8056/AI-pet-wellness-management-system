@@ -1,4 +1,4 @@
-package com.jeeva.petcare;
+package com.noor.petcare;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

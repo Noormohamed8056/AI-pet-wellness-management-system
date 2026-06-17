@@ -1,4 +1,4 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -8,9 +8,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jeeva.petcare.model.Product;
-import com.jeeva.petcare.repository.OrderItemRepo;
-import com.jeeva.petcare.repository.ProductRepo;
+import com.noor.petcare.model.Product;
+import com.noor.petcare.repository.OrderItemRepo;
+import com.noor.petcare.repository.ProductRepo;
 
 import lombok.RequiredArgsConstructor;
 

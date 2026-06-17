@@ -1,17 +1,17 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.jeeva.petcare.dto.VetHealthMetricDTO;
-import com.jeeva.petcare.model.Appointment;
-import com.jeeva.petcare.model.HealthMetric;
-import com.jeeva.petcare.model.Pet;
-import com.jeeva.petcare.repository.AppointmentRepo;
-import com.jeeva.petcare.repository.HealthMetricRepo;
-import com.jeeva.petcare.repository.PetRepo;
+import com.noor.petcare.dto.VetHealthMetricDTO;
+import com.noor.petcare.model.Appointment;
+import com.noor.petcare.model.HealthMetric;
+import com.noor.petcare.model.Pet;
+import com.noor.petcare.repository.AppointmentRepo;
+import com.noor.petcare.repository.HealthMetricRepo;
+import com.noor.petcare.repository.PetRepo;
 
 import lombok.RequiredArgsConstructor;
 

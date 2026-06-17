@@ -1,4 +1,4 @@
-package com.jeeva.petcare.repository;
+package com.noor.petcare.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.jeeva.petcare.model.VetProfile;
+import com.noor.petcare.model.VetProfile;
 
 public interface VetProfileRepo extends JpaRepository<VetProfile, Long> {
     Optional<VetProfile> findByUserId(Long userId);

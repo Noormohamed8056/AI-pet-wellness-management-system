@@ -1,10 +1,10 @@
 // FeedbackService.java
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import org.springframework.stereotype.Service;
 
-import com.jeeva.petcare.model.*;
-import com.jeeva.petcare.repository.*;
+import com.noor.petcare.model.*;
+import com.noor.petcare.repository.*;
 
 import lombok.RequiredArgsConstructor;
 

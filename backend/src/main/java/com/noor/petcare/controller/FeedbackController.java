@@ -1,11 +1,11 @@
 // FeedbackController.java
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.model.Feedback;
-import com.jeeva.petcare.service.FeedbackService;
+import com.noor.petcare.model.Feedback;
+import com.noor.petcare.service.FeedbackService;
 
 import lombok.RequiredArgsConstructor;
 

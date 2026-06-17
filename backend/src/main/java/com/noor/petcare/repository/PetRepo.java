@@ -1,10 +1,10 @@
-package com.jeeva.petcare.repository;
+package com.noor.petcare.repository;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.jeeva.petcare.model.Pet;
+import com.noor.petcare.model.Pet;
 
 public interface PetRepo extends JpaRepository<Pet, Long> {
 

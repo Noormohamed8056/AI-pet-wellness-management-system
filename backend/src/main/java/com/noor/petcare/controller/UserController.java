@@ -1,5 +1,5 @@
 //UserController.java
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import java.util.List;
 
@@ -7,11 +7,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.jeeva.petcare.dto.LoginRequest;
-import com.jeeva.petcare.dto.LoginResponse;
-import com.jeeva.petcare.dto.RegisterRequest;
-import com.jeeva.petcare.model.User;
-import com.jeeva.petcare.service.UserService;
+import com.noor.petcare.dto.LoginRequest;
+import com.noor.petcare.dto.LoginResponse;
+import com.noor.petcare.dto.RegisterRequest;
+import com.noor.petcare.model.User;
+import com.noor.petcare.service.UserService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

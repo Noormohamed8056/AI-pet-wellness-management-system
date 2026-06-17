@@ -1,4 +1,4 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jeeva.petcare.model.Product;
-import com.jeeva.petcare.service.ProductService;
+import com.noor.petcare.model.Product;
+import com.noor.petcare.service.ProductService;
 
 import lombok.RequiredArgsConstructor;
 

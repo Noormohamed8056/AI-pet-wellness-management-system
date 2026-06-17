@@ -1,5 +1,5 @@
 // Corsconfig.java
-package com.jeeva.petcare.config;
+package com.noor.petcare.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

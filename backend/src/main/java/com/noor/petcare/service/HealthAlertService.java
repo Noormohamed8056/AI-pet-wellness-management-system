@@ -1,12 +1,12 @@
-package com.jeeva.petcare.service;
+package com.noor.petcare.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.jeeva.petcare.model.HealthAlert;
-import com.jeeva.petcare.model.HealthMetric;
-import com.jeeva.petcare.repository.HealthAlertRepo;
+import com.noor.petcare.model.HealthAlert;
+import com.noor.petcare.model.HealthMetric;
+import com.noor.petcare.repository.HealthAlertRepo;
 
 import lombok.RequiredArgsConstructor;
 

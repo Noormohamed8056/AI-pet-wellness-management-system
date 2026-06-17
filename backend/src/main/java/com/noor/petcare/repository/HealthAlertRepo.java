@@ -1,4 +1,4 @@
-package com.jeeva.petcare.repository;
+package com.noor.petcare.repository;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.jeeva.petcare.model.HealthAlert;
+import com.noor.petcare.model.HealthAlert;
 
 public interface HealthAlertRepo extends JpaRepository<HealthAlert, Long> {
 

@@ -1,5 +1,5 @@
 //LoginRequest.java
-package com.jeeva.petcare.dto;
+package com.noor.petcare.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

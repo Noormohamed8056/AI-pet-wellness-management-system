@@ -1,4 +1,4 @@
-package com.jeeva.petcare.repository;
+package com.noor.petcare.repository;
 
 import java.util.Optional;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.jeeva.petcare.model.Payment;
+import com.noor.petcare.model.Payment;
 
 public interface PaymentRepo extends JpaRepository<Payment, Long> {
     Optional<Payment> findByReferenceTypeAndReferenceId(

@@ -1,4 +1,4 @@
-package com.jeeva.petcare.controller;
+package com.noor.petcare.controller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import lombok.RequiredArgsConstructor;
 
-import com.jeeva.petcare.model.Pet;
-import com.jeeva.petcare.service.PetService;
+import com.noor.petcare.model.Pet;
+import com.noor.petcare.service.PetService;
 
 @RestController
 @RequestMapping("/pets")

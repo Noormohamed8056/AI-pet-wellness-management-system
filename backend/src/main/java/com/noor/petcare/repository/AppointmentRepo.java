@@ -1,4 +1,4 @@
-package com.jeeva.petcare.repository;
+package com.noor.petcare.repository;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,8 +9,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.jeeva.petcare.model.Appointment;
-import com.jeeva.petcare.model.Pet;
+import com.noor.petcare.model.Appointment;
+import com.noor.petcare.model.Pet;
 
 public interface AppointmentRepo extends JpaRepository<Appointment, Long> {
     List<Appointment> findByUserIdAndStatusIn(Long userId, List<Appointment.Status> statuses);
