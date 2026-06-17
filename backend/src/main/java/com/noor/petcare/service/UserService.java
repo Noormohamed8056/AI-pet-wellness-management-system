@@ -69,8 +69,8 @@ public class UserService {
 }
 
     // SEND AN EMAIL
-    private void sendVerificationEmail(String email, String token) {
-        String link = "http://localhost:8080/users/verify?token=" + token;
+private void sendVerificationEmail(String email, String token) {
+    String link = "https://ai-pet-wellness-management-system.onrender.com/users/verify?token=" + token;
 
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(email);
