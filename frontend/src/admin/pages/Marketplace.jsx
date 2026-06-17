@@ -36,7 +36,7 @@ const Marketplace = () => {
     if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
       return imageUrl;
     }
-    return `http://localhost:8080${imageUrl}`;
+    return `http://https://ai-pet-wellness-management-system.onrender.com${imageUrl}`;
   };
   
   // Modal states

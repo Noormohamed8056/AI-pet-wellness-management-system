@@ -164,7 +164,7 @@ const Profile = () => {
     try {
       setLoading(true);
       
-      const response = await fetch(`http://localhost:8080/users/${vetId}`, {
+      const response = await fetch(`http://https://ai-pet-wellness-management-system.onrender.com/users/${vetId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -859,7 +859,7 @@ const VetCertificates = ({ vetId }) => {
     }
   };
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://ai-pet-wellness-management-system.onrender.com";
 
 const handleViewCertificate = (url, title) => {
   if (url) {

@@ -585,7 +585,7 @@ Thank you for your attention. I'm happy to answer any questions you may have."
 3. **Have sample orders** - Show different order statuses
 4. **Create test queries beforehand** - Display both open and resolved tickets
 5. **Check internet connectivity** - For API calls and Razorpay
-6. **Keep backend running** - Ensure Spring Boot server is active on localhost:8080
+6. **Keep backend running** - Ensure Spring Boot server is active on https://ai-pet-wellness-management-system.onrender.com
 7. **Clear browser cache** - Avoid any caching issues
 8. **Practice the flow** - Rehearse the entire journey 2-3 times
 9. **Keep timing in mind** - Allocate appropriate time to each section

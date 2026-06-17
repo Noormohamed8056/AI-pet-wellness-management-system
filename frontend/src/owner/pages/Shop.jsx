@@ -172,7 +172,7 @@ const Shop = () => {
       return imageUrl;
     }
     // Otherwise prepend the backend URL for relative paths
-    return `http://localhost:8080${imageUrl}`;
+    return `http://https://ai-pet-wellness-management-system.onrender.com${imageUrl}`;
   };
 
   if (loading) {

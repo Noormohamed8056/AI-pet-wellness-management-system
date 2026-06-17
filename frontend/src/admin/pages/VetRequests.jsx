@@ -78,7 +78,7 @@ const VetRequests = () => {
   const openCertificate = (url, filename = "document.pdf") => {
     if (url) {
       const link = document.createElement('a');
-      link.href = `http://localhost:8080${url}`;
+      link.href = `http://https://ai-pet-wellness-management-system.onrender.com${url}`;
       link.target = '_blank';
       link.download = filename;
       document.body.appendChild(link);
@@ -89,7 +89,7 @@ const VetRequests = () => {
 
   const viewCertificate = (url) => {
     if (url) {
-      window.open(`http://localhost:8080${url}`, '_blank', 'noopener,noreferrer');
+      window.open(`http://https://ai-pet-wellness-management-system.onrender.com${url}`, '_blank', 'noopener,noreferrer');
     }
   };
 

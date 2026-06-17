@@ -3,7 +3,7 @@ import axios from "axios";
 
 // backend base url
 const api = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "https://ai-pet-wellness-management-system.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },

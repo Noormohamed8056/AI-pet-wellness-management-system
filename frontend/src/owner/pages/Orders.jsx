@@ -55,7 +55,7 @@ const Orders = () => {
     if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
       return imageUrl;
     }
-    return `http://localhost:8080${imageUrl}`;
+    return `http://https://ai-pet-wellness-management-system.onrender.com${imageUrl}`;
   };
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedOrder, setSelectedOrder] = useState(null);

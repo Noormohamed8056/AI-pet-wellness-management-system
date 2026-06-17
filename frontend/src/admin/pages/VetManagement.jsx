@@ -471,7 +471,7 @@ const VetManagement = () => {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                         {profile.degreeCertificateUrl && (
                           <a
-                            href={`http://localhost:8080${profile.degreeCertificateUrl}`}
+                            href={`http://https://ai-pet-wellness-management-system.onrender.com${profile.degreeCertificateUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-all group"
@@ -489,7 +489,7 @@ const VetManagement = () => {
 
                         {profile.medicalRegistrationCertificateUrl && (
                           <a
-                            href={`http://localhost:8080${profile.medicalRegistrationCertificateUrl}`}
+                            href={`http://https://ai-pet-wellness-management-system.onrender.com${profile.medicalRegistrationCertificateUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-all group"
@@ -507,7 +507,7 @@ const VetManagement = () => {
 
                         {profile.identityProofUrl && (
                           <a
-                            href={`http://localhost:8080${profile.identityProofUrl}`}
+                            href={`http://https://ai-pet-wellness-management-system.onrender.com${profile.identityProofUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-all group"

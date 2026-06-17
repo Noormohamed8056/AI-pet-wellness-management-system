@@ -16,7 +16,7 @@ const Home = () => {
     // Fetch live statistics from backend
     const fetchStats = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/chatbot/stats/public');
+        const response = await axios.get('https://ai-pet-wellness-management-system.onrender.com/api/chatbot/stats/public');
         setStats(response.data);
         setLoading(false);
       } catch (error) {
