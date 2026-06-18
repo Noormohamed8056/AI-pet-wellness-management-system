@@ -16,6 +16,9 @@ public class RazorpayConfig {
     private String keySecret;
 
     public RazorpayClient getRazorpayClient() throws RazorpayException {
+        // Temporary diagnostic logs to help trace authentication failures
+        System.out.println("RAZORPAY KEY: " + keyId);
+        System.out.println("RAZORPAY SECRET PRESENT: " + (keySecret != null && !keySecret.isBlank()));
         return new RazorpayClient(keyId, keySecret);
     }
 
