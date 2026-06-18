@@ -164,27 +164,14 @@ const Profile = () => {
     try {
       setLoading(true);
       
-      const response = await fetch(`http://https://ai-pet-wellness-management-system.onrender.com/users/${vetId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: userData.name,
-          phone: userData.phone
-        })
+      const res = await api.put(`/users/${vetId}`, {
+        name: userData.name,
+        phone: userData.phone
       });
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      console.log('Update successful:', data);
+
+      console.log('Update successful:', res.data);
       toast.success('Personal information updated successfully!');
       setShowPersonalInfo(false);
-      
     } catch (error) {
       console.error('Error updating user info:', error);
       toast.error('Failed to update information');
@@ -859,7 +846,7 @@ const VetCertificates = ({ vetId }) => {
     }
   };
 
-const BASE_URL = "https://ai-pet-wellness-management-system.onrender.com";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://ai-pet-wellness-management-system.onrender.com";
 
 const handleViewCertificate = (url, title) => {
   if (url) {

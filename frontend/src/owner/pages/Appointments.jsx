@@ -489,7 +489,12 @@ const handleInitiatePayment = async () => {
       handler: async function (response) {
         console.log('Payment response:', response);
         try {
-          await markPaymentSuccess(payment.id, response.razorpay_payment_id);
+          await markPaymentSuccess(
+            payment.id,
+            response.razorpay_payment_id,
+            response.razorpay_order_id,
+            response.razorpay_signature
+          );
           toast.success("✅ Payment successful! Appointment confirmed.");
           setShowPaymentModal(false);
           setCurrentAppointment(null);
@@ -534,10 +539,10 @@ const handleInitiatePayment = async () => {
 
 
 
-const handlePaymentSuccess = async (paymentId, razorpayPaymentId) => {
+const handlePaymentSuccess = async (paymentId, razorpayPaymentId, razorpayOrderId, razorpaySignature) => {
   try {
     // Mark payment as successful on backend
-    await markPaymentSuccess(paymentId, razorpayPaymentId);
+    await markPaymentSuccess(paymentId, razorpayPaymentId, razorpayOrderId, razorpaySignature);
     
     // Show success toast
     toast.success('✅ Payment successful! Appointment confirmed.', {

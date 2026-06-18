@@ -1,9 +1,11 @@
 // Api.js -> C:\Users\user\Documents\info_pet\frontend\src\api\api.js
 import axios from "axios";
 
-// backend base url
+// backend base url (use VITE_API_URL in production)
+const BASE_URL = import.meta.env.VITE_API_URL || "https://ai-pet-wellness-management-system.onrender.com";
+
 const api = axios.create({
-  baseURL: "https://ai-pet-wellness-management-system.onrender.com",
+  baseURL: BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
@@ -312,8 +314,14 @@ export const createPayment = (appointmentId) => {
 };
 
 // MARK payment success
-export const markPaymentSuccess = (paymentId, razorpayPaymentId) => {
-  return api.post(`/payments/success?paymentId=${paymentId}&razorpayPaymentId=${razorpayPaymentId}`);
+export const markPaymentSuccess = (paymentId, razorpayPaymentId, razorpayOrderId, razorpaySignature) => {
+  const params = new URLSearchParams({
+    paymentId: String(paymentId),
+    razorpayPaymentId: String(razorpayPaymentId)
+  });
+  if (razorpayOrderId) params.append('razorpayOrderId', razorpayOrderId);
+  if (razorpaySignature) params.append('razorpaySignature', razorpaySignature);
+  return api.post(`/payments/success?${params.toString()}`);
 };
 
 // api.js - Add these endpoints for vet appointments

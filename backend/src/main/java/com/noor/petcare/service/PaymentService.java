@@ -173,7 +173,7 @@ public void refundOrderPayment(Long orderId) {
 
 
 @Transactional
-public Payment markSuccess(Long paymentId, String razorpayPaymentId) {
+public Payment markSuccess(Long paymentId, String razorpayPaymentId, String razorpayOrderId, String razorpaySignature) {
 
     Payment payment = paymentRepo.findById(paymentId)
             .orElseThrow(() -> new RuntimeException("Payment not found"));
@@ -185,6 +185,37 @@ public Payment markSuccess(Long paymentId, String razorpayPaymentId) {
 
     if (payment.getStatus() != Payment.Status.CREATED) {
         throw new RuntimeException("Invalid payment status");
+    }
+
+    // Verify Razorpay signature when running in real mode
+    if (!mockPaymentEnabled) {
+        if (razorpayOrderId == null || razorpaySignature == null) {
+            throw new RuntimeException("Missing Razorpay signature or order id for verification");
+        }
+
+        try {
+            String payload = razorpayOrderId + "|" + razorpayPaymentId;
+            javax.crypto.Mac sha256_HMAC = javax.crypto.Mac.getInstance("HmacSHA256");
+            byte[] keyBytes = razorpayConfig.getKeySecret().getBytes(java.nio.charset.StandardCharsets.UTF_8);
+            javax.crypto.spec.SecretKeySpec secretKey = new javax.crypto.spec.SecretKeySpec(keyBytes, "HmacSHA256");
+            sha256_HMAC.init(secretKey);
+            byte[] hashBytes = sha256_HMAC.doFinal(payload.getBytes(java.nio.charset.StandardCharsets.UTF_8));
+
+            // convert to hex lowercase
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashBytes) {
+                sb.append(String.format("%02x", b & 0xff));
+            }
+            String generatedSignature = sb.toString();
+
+            if (!generatedSignature.equals(razorpaySignature)) {
+                throw new RuntimeException("Razorpay signature verification failed");
+            }
+        } catch (RuntimeException re) {
+            throw re;
+        } catch (Exception ex) {
+            throw new RuntimeException("Failed to verify Razorpay signature: " + ex.getMessage());
+        }
     }
 
     payment.setRazorpayPaymentId(razorpayPaymentId);

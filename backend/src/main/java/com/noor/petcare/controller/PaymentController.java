@@ -47,11 +47,13 @@ public class PaymentController {
     @PostMapping("/success")
     public ResponseEntity<?> success(
             @RequestParam Long paymentId,
-            @RequestParam String razorpayPaymentId) {
+            @RequestParam String razorpayPaymentId,
+            @RequestParam(required = false) String razorpayOrderId,
+            @RequestParam(required = false) String razorpaySignature) {
 
         try {
             return ResponseEntity.ok(
-                    paymentService.markSuccess(paymentId, razorpayPaymentId));
+                    paymentService.markSuccess(paymentId, razorpayPaymentId, razorpayOrderId, razorpaySignature));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

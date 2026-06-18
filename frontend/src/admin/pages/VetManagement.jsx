@@ -40,6 +40,7 @@ import {
 import { toast } from 'react-toastify';
 
 const VetManagement = () => {
+  const BASE_URL = import.meta.env.VITE_API_URL || "https://ai-pet-wellness-management-system.onrender.com";
   const [vets, setVets] = useState([]);
   const [selectedVet, setSelectedVet] = useState(null);
   const [profile, setProfile] = useState(null);
@@ -471,7 +472,7 @@ const VetManagement = () => {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                         {profile.degreeCertificateUrl && (
                           <a
-                            href={`http://https://ai-pet-wellness-management-system.onrender.com${profile.degreeCertificateUrl}`}
+                            href={`${BASE_URL}${profile.degreeCertificateUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-all group"
@@ -489,7 +490,7 @@ const VetManagement = () => {
 
                         {profile.medicalRegistrationCertificateUrl && (
                           <a
-                            href={`http://https://ai-pet-wellness-management-system.onrender.com${profile.medicalRegistrationCertificateUrl}`}
+                            href={`${BASE_URL}${profile.medicalRegistrationCertificateUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-all group"
@@ -507,7 +508,7 @@ const VetManagement = () => {
 
                         {profile.identityProofUrl && (
                           <a
-                            href={`http://https://ai-pet-wellness-management-system.onrender.com${profile.identityProofUrl}`}
+                            href={`${BASE_URL}${profile.identityProofUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-all group"

@@ -34,7 +34,7 @@ import {
   createOrderPayment,
   markPaymentSuccess
 } from '../../api/api';
-import { loadRazorpay } from '../../utils/razorpayConfig';
+import { loadRazorpay, RAZORPAY_CONFIG } from '../../utils/razorpayConfig';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
@@ -54,7 +54,8 @@ const Cart = () => {
     if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
       return imageUrl;
     }
-    return `http://https://ai-pet-wellness-management-system.onrender.com${imageUrl}`;
+    const BASE_URL = import.meta.env.VITE_API_URL || "https://ai-pet-wellness-management-system.onrender.com";
+    return `${BASE_URL}${imageUrl}`;
   };
   
   // Checkout states
@@ -230,7 +231,7 @@ const handleInitiatePayment = async () => {
 
   try {
     const options = {
-      key: "rzp_test_SBhh5VRQMzU46B",
+      key: RAZORPAY_CONFIG.key_id,
       amount: currentPayment.amount * 100, // paise
       currency: currentPayment.currency || "INR",
       name: "PetCare Shop",
@@ -240,7 +241,12 @@ const handleInitiatePayment = async () => {
       handler: async function (response) {
         console.log('Payment response:', response);
         try {
-          await markPaymentSuccess(currentPayment.id, response.razorpay_payment_id);
+          await markPaymentSuccess(
+            currentPayment.id,
+            response.razorpay_payment_id,
+            response.razorpay_order_id,
+            response.razorpay_signature
+          );
           toast.success("✅ Payment successful! Your order has been confirmed.", {
             position: "top-right",
             autoClose: 5000,
@@ -911,7 +917,12 @@ const handleInitiatePayment = async () => {
                     order_id: currentPayment.razorpayOrderId,
                     handler: async function (response) {
                       try {
-                        await markPaymentSuccess(currentPayment.id, response.razorpay_payment_id);
+                        await markPaymentSuccess(
+                          currentPayment.id,
+                          response.razorpay_payment_id,
+                          response.razorpay_order_id,
+                          response.razorpay_signature
+                        );
                         toast.success('Payment successful!');
                         setCheckoutStep(1);
                         setTimeout(() => { window.location.href = '/dashboard/owner/orders'; }, 1000);

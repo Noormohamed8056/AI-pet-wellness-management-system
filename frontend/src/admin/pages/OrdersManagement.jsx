@@ -54,7 +54,8 @@ const OrdersManagement = () => {
     if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
       return imageUrl;
     }
-    return `http://https://ai-pet-wellness-management-system.onrender.com${imageUrl}`;
+    const BASE_URL = import.meta.env.VITE_API_URL || "https://ai-pet-wellness-management-system.onrender.com";
+    return `${BASE_URL}${imageUrl}`;
   };
   
   // Modal state

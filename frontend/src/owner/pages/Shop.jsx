@@ -67,6 +67,8 @@ const Shop = () => {
     loadData();
   }, [userId]);
 
+  const BASE_URL = import.meta.env.VITE_API_URL || "https://ai-pet-wellness-management-system.onrender.com";
+
   // Check if product is in cart
   const isInCart = (productId) => {
     if (!cart || !cart.items) return false;
@@ -172,7 +174,7 @@ const Shop = () => {
       return imageUrl;
     }
     // Otherwise prepend the backend URL for relative paths
-    return `http://https://ai-pet-wellness-management-system.onrender.com${imageUrl}`;
+    return `${BASE_URL}${imageUrl}`;
   };
 
   if (loading) {

@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 const VetRequests = () => {
+  const BASE_URL = import.meta.env.VITE_API_URL || "https://ai-pet-wellness-management-system.onrender.com";
   const [vets, setVets] = useState([]);
   const [profiles, setProfiles] = useState({});
   const [selectedVet, setSelectedVet] = useState(null);
@@ -78,7 +79,7 @@ const VetRequests = () => {
   const openCertificate = (url, filename = "document.pdf") => {
     if (url) {
       const link = document.createElement('a');
-      link.href = `http://https://ai-pet-wellness-management-system.onrender.com${url}`;
+      link.href = `${BASE_URL}${url}`;
       link.target = '_blank';
       link.download = filename;
       document.body.appendChild(link);
@@ -89,7 +90,7 @@ const VetRequests = () => {
 
   const viewCertificate = (url) => {
     if (url) {
-      window.open(`http://https://ai-pet-wellness-management-system.onrender.com${url}`, '_blank', 'noopener,noreferrer');
+      window.open(`${BASE_URL}${url}`, '_blank', 'noopener,noreferrer');
     }
   };
 
