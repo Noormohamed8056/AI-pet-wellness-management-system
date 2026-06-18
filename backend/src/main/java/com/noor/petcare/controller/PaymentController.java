@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import jakarta.servlet.http.HttpServletRequest;
 
 import com.noor.petcare.service.PaymentService;
 
@@ -49,7 +50,22 @@ public class PaymentController {
             @RequestParam Long paymentId,
             @RequestParam String razorpayPaymentId,
             @RequestParam(required = false) String razorpayOrderId,
-            @RequestParam(required = false) String razorpaySignature) {
+            @RequestParam(required = false) String razorpaySignature,
+            HttpServletRequest request) {
+
+        // Accept alternative parameter names sent by some clients (snake_case)
+        if ((razorpaySignature == null || razorpaySignature.isBlank())) {
+            String alt = request.getParameter("razorpay_signature");
+            if (alt != null && !alt.isBlank()) {
+                razorpaySignature = alt;
+            }
+        }
+        if ((razorpayOrderId == null || razorpayOrderId.isBlank())) {
+            String altOrder = request.getParameter("razorpay_order_id");
+            if (altOrder != null && !altOrder.isBlank()) {
+                razorpayOrderId = altOrder;
+            }
+        }
 
         try {
             return ResponseEntity.ok(

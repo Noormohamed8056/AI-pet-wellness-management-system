@@ -201,14 +201,20 @@ public Payment markSuccess(Long paymentId, String razorpayPaymentId, String razo
             sha256_HMAC.init(secretKey);
             byte[] hashBytes = sha256_HMAC.doFinal(payload.getBytes(java.nio.charset.StandardCharsets.UTF_8));
 
-            // convert to hex lowercase
+            // compute hex (lowercase) and base64 variants
             StringBuilder sb = new StringBuilder();
             for (byte b : hashBytes) {
                 sb.append(String.format("%02x", b & 0xff));
             }
-            String generatedSignature = sb.toString();
+            String generatedHex = sb.toString();
+            String generatedBase64 = java.util.Base64.getEncoder().encodeToString(hashBytes);
 
-            if (!generatedSignature.equals(razorpaySignature)) {
+            String provided = razorpaySignature == null ? "" : razorpaySignature.trim();
+
+            // Accept either hex or base64-encoded signature to be tolerant of client encodings
+            boolean match = provided.equalsIgnoreCase(generatedHex) || provided.equals(generatedBase64);
+
+            if (!match) {
                 throw new RuntimeException("Razorpay signature verification failed");
             }
         } catch (RuntimeException re) {
