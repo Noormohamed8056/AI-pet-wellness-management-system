@@ -909,7 +909,7 @@ const handleInitiatePayment = async () => {
               <button
                 onClick={() => {
                   const options = {
-                    key: "rzp_test_SBhh5VRQMzU46B",
+                    key: "rzp_test_T396co7rEpNVGg",
                     amount: currentPayment.amount * 100,
                     currency: "INR",
                     name: "PetCare Shop",

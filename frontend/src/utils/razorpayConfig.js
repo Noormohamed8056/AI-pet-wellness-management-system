@@ -1,7 +1,7 @@
 // utils/razorpayConfig.js
 
 export const RAZORPAY_CONFIG = {
-  key_id: import.meta.env?.VITE_RAZORPAY_KEY_ID || "rzp_test_S6W4IL8AIGnvYz",
+  key_id: import.meta.env?.VITE_RAZORPAY_KEY_ID || "rzp_test_T396co7rEpNVGg",
   test_mode: true,
   company_name: "PetCare Veterinary Services",
   company_logo: "/logo.png",

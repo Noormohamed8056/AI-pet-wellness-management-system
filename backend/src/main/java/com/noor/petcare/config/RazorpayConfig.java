@@ -9,7 +9,7 @@ import com.razorpay.RazorpayException;
 @Configuration
 public class RazorpayConfig {
 
-    @Value("${razorpay.key-id:${razorpay.key.id:rzp_test_SBhh5VRQMzU46B}}")
+    @Value("${razorpay.key-id:${razorpay.key.id:rzp_test_T396co7rEpNVGg}}")
     private String keyId;
 
     @Value("${razorpay.key-secret:${razorpay.key.secret:}}")
