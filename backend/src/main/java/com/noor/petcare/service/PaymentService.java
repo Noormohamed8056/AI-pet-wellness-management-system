@@ -13,6 +13,8 @@ import com.noor.petcare.model.*;
 import com.noor.petcare.repository.*;
 
 import jakarta.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import lombok.RequiredArgsConstructor;
 import java.util.UUID;
 
@@ -20,6 +22,8 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class PaymentService {
+
+    private static final Logger log = LoggerFactory.getLogger(PaymentService.class);
 
     // ============================================================
     // DEV/TEST MODE: Set to true to skip real Razorpay API calls.
@@ -234,7 +238,11 @@ public Payment markSuccess(Long paymentId, String razorpayPaymentId, String razo
         appt.setStatus(Appointment.Status.PAID);
         appointmentRepo.save(appt);
 
-        sendAppointmentBookedEmail(appt);
+        try {
+            sendAppointmentBookedEmail(appt);
+        } catch (Exception e) {
+            log.error("Payment success email failed for appointment id {}", appt.getId(), e);
+        }
     }
 
     // 🔹 Order flow (NEW)
