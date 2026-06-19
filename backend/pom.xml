@@ -87,18 +87,6 @@
     </dependencies>
 
     <build>
-        <resources>
-            <!-- If an uploads/ folder exists in the project root at build time,
-                 include its contents in the packaged jar under static/uploads
-                 so images are available at /uploads/{file} when served from
-                 the classpath. This is optional but helpful for deployments
-                 where writing to the filesystem is not persistent. -->
-            <resource>
-                <directory>uploads</directory>
-                <targetPath>static/uploads</targetPath>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

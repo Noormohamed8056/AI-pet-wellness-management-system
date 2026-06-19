@@ -392,13 +392,7 @@ public class DataLoader {
             p.setDescription(data[1]);
             p.setPrice(Double.parseDouble(data[2]));
             p.setStock(Integer.parseInt(data[3]));
-            // Use the explicit image URL provided in the seed data when available
-            String providedImage = data.length > 4 ? data[4] : null;
-            if (providedImage != null && !providedImage.isBlank()) {
-                p.setImageUrl(providedImage);
-            } else {
-                p.setImageUrl(resolveProductImageUrl(data[0]));
-            }
+            p.setImageUrl(resolveProductImageUrl(data[0]));
             p.setActive(true);
             products.add(productRepo.save(p));
         }
@@ -412,7 +406,11 @@ public class DataLoader {
 
         for (Product product : products) {
             String imageUrl = product.getImageUrl();
-            boolean shouldReplace = imageUrl == null || imageUrl.isBlank() || imageUrl.startsWith("/uploads/");
+            boolean shouldReplace = imageUrl == null
+                    || imageUrl.isBlank()
+                    || imageUrl.contains("images.unsplash.com")
+                    || imageUrl.contains("source.unsplash.com")
+                    || imageUrl.contains("picsum.photos");
 
             if (shouldReplace) {
                 product.setImageUrl(resolveProductImageUrl(product.getName()));
@@ -434,55 +432,55 @@ public class DataLoader {
         String normalized = productName.toLowerCase();
 
         if (normalized.contains("dog food")) {
-            return "https://source.unsplash.com/600x600/?dog-food";
+            return "/uploads/1772024727406_Premimu%20food.jpg";
         }
         if (normalized.contains("cat litter")) {
-            return "https://source.unsplash.com/600x600/?cat-litter";
+            return "/uploads/1772024761921_cat%20litter.jpg";
         }
         if (normalized.contains("pet shampoo")) {
-            return "https://source.unsplash.com/600x600/?pet-shampoo";
+            return "/uploads/1772024792132_Pet%20shampoo.jpg";
         }
         if (normalized.contains("dog collar") || normalized.contains("leash")) {
-            return "https://source.unsplash.com/600x600/?dog-collar,leash";
+            return "/uploads/1772024829556_dog%20collar%20and%20leash%20set.jpg";
         }
         if (normalized.contains("cat toy") || normalized.contains("interactive")) {
-            return "https://source.unsplash.com/600x600/?cat-toy";
+            return "/uploads/1772024855828_cat%20toy%20bundle.jpg";
         }
         if (normalized.contains("multivitamin") || normalized.contains("vitamin") || normalized.contains("fish oil")) {
-            return "https://source.unsplash.com/600x600/?pet-vitamin";
+            return "/uploads/1772024879665_pet%20vitamin.jpg";
         }
         if (normalized.contains("treat")) {
-            return "https://source.unsplash.com/600x600/?dog-treats";
+            return "/uploads/1772024907542_Dog%20Treats.jpg";
         }
         if (normalized.contains("bed")) {
-            return "https://source.unsplash.com/600x600/?pet-bed";
+            return "/uploads/1772024937826_petbeds.jpg";
         }
         if (normalized.contains("grooming") || normalized.contains("brush")) {
-            return "https://source.unsplash.com/600x600/?grooming-brush";
+            return "/uploads/1770773482827_cat%20brush.jpg";
         }
         if (normalized.contains("first aid")) {
-            return "https://source.unsplash.com/600x600/?pet-first-aid";
+            return "/uploads/1772024879665_pet%20vitamin.jpg";
         }
         if (normalized.contains("harness")) {
-            return "https://source.unsplash.com/600x600/?dog-harness";
+            return "/uploads/1772024829556_dog%20collar%20and%20leash%20set.jpg";
         }
         if (normalized.contains("scratching post")) {
-            return "https://source.unsplash.com/600x600/?cat-scratching-post";
+            return "/uploads/1772024855828_cat%20toy%20bundle.jpg";
         }
         if (normalized.contains("water fountain")) {
-            return "https://source.unsplash.com/600x600/?pet-water-fountain";
+            return "/uploads/1772024761921_cat%20litter.jpg";
         }
         if (normalized.contains("nail clipper")) {
-            return "https://source.unsplash.com/600x600/?pet-nail-clipper";
+            return "/uploads/1770773482827_cat%20brush.jpg";
         }
         if (normalized.contains("flea") || normalized.contains("tick")) {
-            return "https://source.unsplash.com/600x600/?flea-collar";
+            return "/uploads/1772024829556_dog%20collar%20and%20leash%20set.jpg";
         }
         if (normalized.contains("travel carrier")) {
-            return "https://source.unsplash.com/600x600/?pet-travel-carrier";
+            return "/uploads/1772024937826_petbeds.jpg";
         }
         if (normalized.contains("rain jacket")) {
-            return "https://source.unsplash.com/600x600/?dog-rain-jacket";
+            return "/uploads/1772024829556_dog%20collar%20and%20leash%20set.jpg";
         }
 
         return "https://source.unsplash.com/600x600/?pet-products";
