@@ -17,8 +17,8 @@ backend/target/
 # ==========================================
 # Uploads
 # ==========================================
-uploads/
-backend/uploads/
+# uploads/
+# backend/uploads/
 
 # ==========================================
 # Logs
@@ -48,3 +48,4 @@ Thumbs.db
 *.iml
 *.ipr
 *.iws
+backend/uploads/vet-docs/
