@@ -3,6 +3,22 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import axios from 'axios';
 
+import about1 from '../assets/about-1.jpg';
+import about2 from '../assets/about-2.jpg';
+import about3 from '../assets/about-3.jpg';
+
+import aboutIcon1 from '../assets/about-1-icon.png';
+import aboutIcon2 from '../assets/about-2-icon.png';
+import aboutIcon3 from '../assets/about-3-icon.png';
+
+import intro1 from '../assets/intro-1.png';
+import intro2 from '../assets/intro-2.png';
+import intro3 from '../assets/intro-3.png';
+
+import product1 from '../assets/product-1.jpg';
+import product2 from '../assets/product-2.jpg';
+import product3 from '../assets/product-3.jpg';
+
 const Home = () => {
   const [stats, setStats] = useState({
     totalPets: 1000,
@@ -139,7 +155,7 @@ const Home = () => {
         <div className="intro-grid">
           <div className="intro-card glass-card">
             <div className="intro-image">
-              <img src="/src/assets/intro-1.png" alt="intro" />
+              <img src="{intro1}" alt="intro" />
             </div>
             <h3>Pet Experts</h3>
             <p>Meet our team of skilled veterinarians, dedicated to your pet's well-being.</p>
@@ -148,7 +164,7 @@ const Home = () => {
 
           <div className="intro-card glass-card">
             <div className="intro-image">
-              <img src="/src/assets/intro-2.png" alt="intro" />
+              <img src="{intro2}" alt="intro" />
             </div>
             <h3>Vet Services</h3>
             <p>Offering a wide range of veterinary services to keep your pets healthy and happy.</p>
@@ -157,7 +173,7 @@ const Home = () => {
 
           <div className="intro-card glass-card">
             <div className="intro-image">
-              <img src="/src/assets/intro-3.png" alt="intro" />
+              <img src="{intro3}" alt="intro" />
             </div>
             <h3>Contact Us</h3>
             <p>Reach out to us for any inquiries or schedule an appointment for your pet's care.</p>
@@ -176,11 +192,11 @@ const Home = () => {
         <div className="about-container">
           <div className="about-row">
             <div className="about-image">
-              <img src="/src/assets/about-1.jpg" alt="about" />
+              <img src="{about1}" alt="about" />
             </div>
             <div className="about-content">
               <span className="about-icon">
-                <img src="/src/assets/about-1-icon.png" alt="icon" />
+                <img src="{aboutIcon1}" alt="icon" />
               </span>
               <h3>Let us help you with your pet health</h3>
               <p>Our expert veterinarians are here to provide comprehensive care and guidance to ensure your pet stays in perfect health.</p>
@@ -189,11 +205,11 @@ const Home = () => {
 
           <div className="about-row reverse">
             <div className="about-image">
-              <img src="/src/assets/about-2.jpg" alt="about" />
+              <img src="{about2}" alt="about" />
             </div>
             <div className="about-content">
               <span className="about-icon">
-                <img src="/src/assets/about-2-icon.png" alt="icon" />
+                <img src="{aboutIcon2}" alt="icon" />
               </span>
               <h3>Caring personal will take care of your pet</h3>
               <p>Your pet will be in good hands with our compassionate and well-trained staff, who treat every pet like family.</p>
@@ -202,11 +218,11 @@ const Home = () => {
 
           <div className="about-row">
             <div className="about-image">
-              <img src="/src/assets/about-3.jpg" alt="about" />
+              <img src="{about3}" alt="about" />
             </div>
             <div className="about-content">
               <span className="about-icon">
-                <img src="/src/assets/about-3-icon.png" alt="icon" />
+                <img src="{aboutIcon3}" alt="icon" />
               </span>
               <h3>Let us groom your precious and loved pet</h3>
               <p>From bathing to styling, we offer professional grooming services to keep your pet looking and feeling their best.</p>
@@ -224,21 +240,21 @@ const Home = () => {
 
         <div className="products-grid">
           <div className="product-card glass-card">
-            <img src="/src/assets/product-1.jpg" alt="product" />
+            <img src="{product1}" alt="product" />
             <h4>Dog Trash Bag</h4>
             <p>Convenient and eco-friendly trash bags for easy pet waste disposal.</p>
             <h3>$29.00 USD</h3>
           </div>
 
           <div className="product-card glass-card">
-            <img src="/src/assets/product-2.jpg" alt="product" />
+            <img src="{product2}" alt="product" />
             <h4>Pet Accessories</h4>
             <p>Explore our range of stylish and functional accessories for your furry friends.</p>
             <h3>$49.00 USD</h3>
           </div>
 
           <div className="product-card glass-card">
-            <img src="/src/assets/product-3.jpg" alt="product" />
+            <img src="{product3}" alt="product" />
             <h4>Dog Food</h4>
             <p>Nutritious and delicious dog food to keep your pet healthy and happy.</p>
             <h3>$79.00 USD</h3>
